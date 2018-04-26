@@ -1,12 +1,18 @@
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from './../pages/login/login';
 import { RegistarPage } from '../pages/registar/registar';
+import { ProfilePage } from '../pages/profile/profile';
+import { SelectIlhaPage } from '../pages/select-ilha/select-ilha';
+import { AtividadePage } from '../pages/atividade/atividade';
+import { SelectSpotPage } from './../pages/select-spot/select-spot';
+import { CategoriaPage } from './../pages/categoria/categoria';
+import { SpotPage } from '../pages/spot/spot';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +31,13 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Login', component: LoginPage },
-      { title: 'Registar', component: RegistarPage }
+      { title: 'Registar', component: RegistarPage },
+      { title: 'Ilha', component: SelectIlhaPage },
+      { title: 'Categoria', component: CategoriaPage },
+      { title: 'Atividade', component: AtividadePage },
+      { title: 'Profile', component: ProfilePage },
+      { title: 'Spot', component: SpotPage },
+      { title: 'Spots', component: SelectSpotPage }
     ];
 
   }

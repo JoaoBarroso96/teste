@@ -13,8 +13,11 @@ import 'rxjs/add/operator/toPromise';
 */
 @Injectable()
 export class UsersProvider {
+  public utilizador: any;
+  public spots: any;
+
   //private API_URL = 'https://reqres.in/api/';
-  private API_URL = 'http://localhost:8080/naToureza/public/api/user';
+  private API_URL = 'http://localhost:8080/naToureza/public/api';
   
   constructor(public http: Http) {}
 
@@ -31,9 +34,7 @@ export class UsersProvider {
         });
       let options = new RequestOptions({ headers: headers });
 
-      console.log(data);
-
-      this.http.post(this.API_URL, data, options)
+      this.http.post(this.API_URL + "/user", data, options)
       .toPromise()
       .then((response) =>
       {
@@ -47,17 +48,65 @@ export class UsersProvider {
         reject(error.json());
       });
     });
+  }
 
+  updateProfile(firstName: string, lastName: string,genero: string,residente: boolean,birthday: String,nacionalidade: string){
+    return new Promise((resolve, reject) => {
+      var data = {
+        id: this.utilizador.id,
+        firstName: firstName,
+        lastName: lastName,
+        genero: genero,
+        residente: residente,
+        birthday: birthday,
+        nacionalidade: nacionalidade
+      };
+
+      let headers = new Headers(
+        {
+          'Content-Type' : 'application/json'
+        });
+      let options = new RequestOptions({ headers: headers });
+
+      this.http.put(this.API_URL + "/user/updateUser", data, options)
+      .toPromise()
+      .then((response) =>
+      {
+        console.log('API Response : ', response.json());
+        resolve(response.json());
+      })
+      .catch((error) =>
+      {
+        console.error('API Error : ', error.status);
+        console.error('API Error : ', JSON.stringify(error));
+        reject(error.json());
+      });
+    });
   }
 
   login(email: string, password:string ){
+    console.log(email);
     return new Promise((resolve,reject) => {
       var data = {
         email: email,
         password: password
       };
 
-      this.http.post(this.API_URL + 'login', data)
+      this.http.post(this.API_URL + '/user/login', data)
+        .subscribe((result:any) => {
+          resolve(result.json());
+        },  
+        (error) => {
+          reject(error.json());
+        })
+    });
+  }
+
+  getAllSpots(){
+    return new Promise((resolve,reject) => {
+
+      let url = this.API_URL + '/atividades/allSpots';
+      this.http.get(url)
         .subscribe((result:any) => {
           resolve(result.json());
         },  

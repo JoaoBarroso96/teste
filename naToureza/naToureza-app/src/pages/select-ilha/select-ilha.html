@@ -1,0 +1,48 @@
+<!--
+  Generated template for the SelectIlhaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Escolha a Ilha</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding #item>
+      <ion-item  (click)="openCategoria('São Miguel')">
+        São Miguel
+      </ion-item>
+      <ion-item (click)="openCategoria('Santa Maria')">
+        Santa Maria
+      </ion-item>
+      <ion-item (click)="openCategoria('Terceira')">
+        Terceira
+      </ion-item> 
+      <ion-item (click)="openCategoria('Graciosa')">
+        Graciosa
+      </ion-item>
+      <ion-item (click)="openCategoria('São Jorge')">
+        São Jorge
+      </ion-item>
+      <ion-item (click)="openCategoria('Pico')">
+        Pico
+      </ion-item>
+      <ion-item (click)="openCategoria('Faial')">
+        Faial
+      </ion-item >
+      <ion-item (click)="openCategoria('Flores')">
+        Flores
+      </ion-item>
+      <ion-item (click)="openCategoria('Corvo')">
+        Corvo
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

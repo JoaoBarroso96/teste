@@ -1,5 +1,11 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons left>
+        <button ion-button icon-only>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -8,11 +14,13 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3>{{this.usersProvider.utilizador.email}}</h3>
 
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+    Ficha Perfil do Utilizador
   </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button class="register-btn" block clear (click)="openProfile()" >Editar</button>
+
+  <button ion-button class="register-btn" block clear (click)="openSelectIsland()" >Atividades</button>
 </ion-content>
