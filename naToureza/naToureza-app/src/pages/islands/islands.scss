@@ -1,0 +1,52 @@
+page-islands {
+
+	.island-grid {
+		padding: 5% 1%;
+	}
+
+	.island-square {
+		background: color($colors, standard);
+		border: solid #f7f7f7 1px;
+		margin: auto;
+		height: 30vw;
+		width: 30vw;
+
+		p {
+			font-family: $font-family-light;
+			color: white;
+			text-align: center;
+			font-size: 1.3em;
+
+		}
+
+		img {
+			margin: auto;
+			display: block;
+			width: 20vw;
+			height: auto;
+
+		}
+
+
+	}
+
+
+
+	.toolbar-title-md {
+			color: selected;
+	}
+
+
+	@media only screen and (max-width: 600px) {
+		.island-square {
+			p {
+				font-size: 0.8em;
+			}
+		}
+
+
+
+	}
+
+
+}

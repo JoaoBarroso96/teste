@@ -14,3 +14,145 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+//Applied in Android & IOS
+
+
+.toolbar-title {
+	font-family: $font-family-regular;
+}
+
+.scroll-content {
+	background-color: #f7f7f7;
+}
+
+ion-tabs {
+	z-index: -1;
+}
+
+
+//Bottom tabs style
+
+.tabbar, .tabs-ios, .tabs-md , .tabs-wp {
+    .tab-button-icon {
+        background-repeat:no-repeat;
+        background-position:center;
+        height:35px;
+        width:35px;
+        margin-top: 10px;
+        background-size:contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        &:before {
+            display:none;
+        }
+    }
+    .tab-button-text{
+    	margin-bottom: 10px;
+    }
+}
+
+.tab-button-text{
+	font-family: $font-family-light;
+	font-size: 1.3em;
+	color: #898989;
+}
+
+
+//Applied in iOS 
+
+.item-ios.item-block .item-inner:focus {
+	border: none;
+}
+
+
+.tabs-ios {
+	a[aria-selected=false]{
+		.tab-button-icon[ng-reflect-name=profile], .tab-button-icon[aria-label=profile] {
+			background-image: url(../assets/icon/profile-unselected.png);
+		}
+		.tab-button-icon[ng-reflect-name=activities], .tab-button-icon[aria-label=activities] {
+			background-image: url(../assets/icon/activities-unselected.png);
+		}
+		.tab-button-icon[ng-reflect-name=quests], .tab-button-icon[aria-label=quests] {
+			background-image: url(../assets/icon/quests-unselected.png);
+		}
+		.tab-button-icon[ng-reflect-name=settings], .tab-button-icon[aria-label=settings] {
+			background-image: url(../assets/icon/settings-unselected.png);
+		}
+	}
+	a[aria-selected=true]{
+		.tab-button-text {
+			color: #059b9a;
+			font-family: $font-family-medium;
+		}
+		.tab-button-icon[ng-reflect-name=profile], .tab-button-icon[aria-label=profile] {
+			background-image: url(../assets/icon/profile-selected.png);
+		}
+		.tab-button-icon[ng-reflect-name=activities], .tab-button-icon[aria-label=activities] {
+			background-image: url(../assets/icon/activities-selected.png);
+		}
+		.tab-button-icon[ng-reflect-name=quests], .tab-button-icon[aria-label=quests] {
+			background-image: url(../assets/icon/quests-selected.png);
+		}
+		.tab-button-icon[ng-reflect-name=settings], .tab-button-icon[aria-label=settings] {
+			background-image: url(../assets/icon/settings-selected.png);
+		}
+	}
+}
+
+
+
+//Applied in Android 
+
+
+.item-md.item-block .item-inner {
+	border: none;
+}
+
+
+.tabs-md {
+    a[aria-selected=true] {
+            span {
+                color: #059b9a;
+                font-family: $font-family-medium;
+            }
+
+            .tab-button-icon[ng-reflect-name=profile], .tab-button-icon[aria-label=profile] {
+                background-image: url(../assets/icon/profile-selected.png);
+            }
+            .tab-button-icon[ng-reflect-name=activities], .tab-button-icon[aria-label=activities] {
+                background-image: url(../assets/icon/activities-selected.png);
+            }
+            .tab-button-icon[ng-reflect-name=quests], .tab-button-icon[aria-label=quests] {
+                background-image: url(../assets/icon/quests-selected.png);
+            }
+            .tab-button-icon[ng-reflect-name=settings], .tab-button-icon[aria-label=settings] {
+                background-image: url(../assets/icon/settings-selected.png);
+            }
+
+    }
+     a[aria-selected=false] {
+            span {
+                color: #898989;
+                font-family: $font-family-light;
+            }
+
+            .tab-button-icon[ng-reflect-name=profile], .tab-button-icon[aria-label=profile] {
+                background-image: url(../assets/icon/profile-unselected.png);
+            }
+            .tab-button-icon[ng-reflect-name=activities], .tab-button-icon[aria-label=activities] {
+                background-image: url(../assets/icon/activities-unselected.png);
+            }
+            .tab-button-icon[ng-reflect-name=quests], .tab-button-icon[aria-label=quests] {
+                background-image: url(../assets/icon/quests-unselected.png);
+            }
+            .tab-button-icon[ng-reflect-name=settings], .tab-button-icon[aria-label=settings] {
+                background-image: url(../assets/icon/settings-unselected.png);
+            }
+
+    }
+ 
+ }

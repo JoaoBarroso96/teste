@@ -1,13 +1,7 @@
 {
-  "name": "naToureza-app",
+  "name": "Natoureza",
   "app_id": "",
   "type": "ionic-angular",
-  "proxies": [
-    {
-      "path": "/api",
-      "proxyUrl": "http://localhost:8080/"
-    }
-  ],
   "integrations": {
     "cordova": {}
   }

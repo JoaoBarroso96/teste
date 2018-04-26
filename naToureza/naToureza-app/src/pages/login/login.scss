@@ -1,54 +1,144 @@
 page-login {
- 
-    .login-content {
-        background: #56CA96;
-     
-        .logo-row {
-          padding-top: 50px;
-          padding-bottom: 20px;
-        }
-     
-        .login-box {
-          background: #399F8B;
-          padding: 20px 20px 0px 20px;
-          margin-top: 30px;
-        }
-     
-        ion-row {
-           align-items: center;
-           text-align: center;
-         }
-     
-         ion-item {
-             border-radius: 30px !important;
-             padding-left: 30px !important;
-             font-size: 0.9em;
-             margin-bottom: 10px;
-             border: 1px solid #ffffff;
-             border-bottom: 0px !important;
-             box-shadow: none !important;
-         }
-     
-         .signup-col {
-           margin: 0px 16px 0px 16px;
-           padding-bottom: 20px;
-         }
-     
-         .item-inner {
-           border-bottom-color: #ffffff !important;
-           box-shadow: none !important;
-         }
-     
-         .submit-btn {
-           background: #51CFB1;
-           border-radius: 30px !important;
-           border: 1px solid #ffffff;
-         }
-     
-         .register-btn {
-           color: #ffffff;
-           font-size: 0.8em;
-         }
-      }
-     
+
+	.scroll-content{
+		background-color: transparent;
+	}
+	
+	.img-input{
+		height: $label-icon-size;
+	}
+
+	.background {
+		background: url('../assets/imgs/background.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		//background: color($colors, primary);
+	}
+
+	.logo-white {
+		margin: 20% auto 10% auto;
+		width: 70%;
+	}
+
+	.login-input{
+		background: rgba(0,0,0,0);
+		color: white;
+		font-family: $font-family-light;
+	}
+
+	.login-form{
+		margin: auto;
+		width: 80%;
+	}
+
+	.standard-button  {
+		border-radius: 20px;
+		margin: 0 auto 1em auto;
+		box-shadow: none;
+		padding: 20px 30px;
+		width:75%;
+
+	}
+
+	.ghost {
+		border: 2px solid;
+		background-color: transparent;
+		font-family: $font-family-medium;
+		color: white;
+	}
+
+	.filled {
+		background-color: white;
+		font-family: $font-family-medium;
+		color: color($colors,filled-blue);
+		margin-top: 2em;
+	}
+
+	.social-network-button {
+		margin-top: 1em;
+		width: 10em;
+
+		img {
+			vertical-align: middle;
+			width: 25px;
+			height: 25px;
+			margin-right: 10px;
+		}
+
+	}
+
+	#forgot-password{
+		margin-top: 2em;
+		margin-left: 1.5em;
+		font-family: $font-family-light;
+		font-size: 0.8em;
+		position: relative;
+		color: white;
+
+	}
+
+	#img-tour{
+		margin: auto;
+		width: 100%;
+		height: auto;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.bold {
+		color: white;
+		font-size: $bold-font-size;
+		font-weight: 700;
+	}
+
+	.with-text {
+		font-family: $font-family-light;
+		font-size: $with-font-size;
+		color: white;
+
+		span {
+			position: relative;
+			display: inline-block;
+		}
+
+		span:before,span:after {
+			content: '';
+		    position: absolute;
+		    top: 50%;
+		    border-bottom: 1px solid rgba(255,255,255,0.2);
+		    width: 5em;
+		    margin: 0 20px;
+
+		}
+
+		span:before {
+			right: 100%;
+		}
+
+		span:after {
+			left: 100%;
+		}
+	}
+
+
+	.with-text:before {
+		left: 0;
+
+	}
+
+	.with-area{
+		text-align: center;
+		margin: auto;
+
+	}
+
+	@media only screen and(max-height: 600px) {
+		.logo-white {
+			margin: 10% auto 5% auto;
+		}
+
+
+	}
+
+
 }

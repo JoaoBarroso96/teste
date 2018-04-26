@@ -4,45 +4,42 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
-<ion-content class="login-content" padding>
-  <ion-row class="logo-row">
-    <ion-col></ion-col>
-    <ion-col></ion-col>
-  </ion-row>
-  <div class="login-box">
-    <form (ngSubmit)="login()"  #registerForm="ngForm">
-      <ion-row>
-        <ion-col>
-          <ion-list inset>
-            
-            <ion-item>
-              <ion-input  [(ngModel)]="model.email" type="text" placeholder="Email" name="email"  required></ion-input>
-            </ion-item>
-            
-            <ion-item>
-              <ion-input  [(ngModel)]="model.password" type="password" placeholder="Password" name="password" required></ion-input>
-            </ion-item>
-            
-          </ion-list>
-        </ion-col>
-      </ion-row>
-      
-      <ion-row>
-        <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" [disabled]="disableButton">Login</button>
-        </ion-col>
-      </ion-row>
-      
-    </form>
-    <button ion-button class="register-btn" block clear (click)="createAccount()" >Registar</button>
-  </div>
+
+<ion-content class="background" no-bounce>
+	<div class="logo-white">
+		<img src="assets/icon/logo-white.png">
+	</div>
+	<ion-row class="login-form">
+		<ion-item class="login-input">
+			<ion-label><img class="img-input" src="assets/icon/username.png"></ion-label>
+			<ion-input type="text" placeholder="USERNAME"></ion-input>
+		</ion-item>
+		<ion-item class="login-input">
+			<ion-label><img class="img-input" src="assets/icon/padlock.png"></ion-label>
+			<ion-input type="password" placeholder="PASSWORD"></ion-input>
+		</ion-item>
+		<div tappable clear full color="light" id="forgot-password">
+			<p>FORGOT PASSWORD?</p>
+		</div>
+	</ion-row>
+	<ion-row>
+		<button ion-button class="standard-button filled" (click)='openTabs()'>LOGIN</button>
+	</ion-row>
+	<ion-row>
+		<button ion-button class="standard-button ghost" (click)='openRegister()'>CREATE ACCOUNT</button>
+	</ion-row>
+	<ion-row>
+		<div class="with-area">
+			<p class="with-text"><span> or login with</span></p>
+		</div>
+	</ion-row>
+	<ion-row>
+		<button ion-button class="standard-button social-network-button ghost" (click)='onClick()'>
+			<img class="google-icon" src="assets/icon/google-plus.png">
+			<p>GOOGLE</p>
+		</button>
+	</ion-row>
+	<div><img id="img-tour" src="assets/imgs/tour.png"></div>
 </ion-content>

@@ -1,0 +1,53 @@
+page-type {
+	#type-grid{
+		height: 100%;
+		padding-top: 5%;
+
+
+	}
+
+	#water{
+		background: color($colors, water);
+	}
+
+	#land{
+		background: color($colors, land);
+	}
+
+	#wind{
+		background: color($colors, air);
+	}
+
+	.type-row{
+	
+		height: 30%;
+		margin: 0 5% 5% 5%;
+
+		img {
+			margin: auto;
+			display: block;
+			max-width: 5em;
+			height: auto;
+		}
+
+		p {
+			font-family: $font-family-medium;
+			font-size: 1.2em;
+			color: white;
+			text-align: center;
+		}
+	}
+
+	@media only screen and (min-width: 600px) {
+
+		.type-row {
+
+			p {
+
+				font-size: 2em;
+
+			}
+		}
+	}
+
+}

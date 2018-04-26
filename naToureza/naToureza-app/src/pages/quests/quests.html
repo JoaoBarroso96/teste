@@ -1,0 +1,75 @@
+<!--
+  Generated template for the QuestsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Quests</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<div class="quest-warning" *ngIf=hideThis>
+		<button ion-button clear class="notification-close" (click)="hide()">
+			<ion-icon class="icon-close" name="ios-close"></ion-icon>
+		</button>
+		<div class="notification-area">
+			<div>
+				<img src="../assets/icon/bell.png">
+			</div>
+			<div>
+				<p>Don’t forget to go to the activity's page and mark it as complete.</p>
+			</div>
+		</div>
+	</div>
+	<h2 class="quest-heading">Daily Quests</h2>
+	<ion-row padding>
+		<ion-col col-4 col-sm-6>
+			<div class="quest-icon"><img class="icon-quest" src="../assets/icon/red-calendar.png"></div>
+		</ion-col>
+		<ion-col col-8 col-sm-6>
+			<div class="quest-container-right">
+				<p class="quest-info">Complete 3 trails</p>
+				<div class="progress-bar">
+					<div class="progress-bar-fill"></div>
+				</div>
+				<p class="progress-label">Progress:</p><span class="progress-info">2/3</span>
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row padding>
+		<ion-col col-8 col-sm-6>
+			<div class="quest-container-left">
+				<p class="quest-info">Complete 3 trails</p>
+				<div class="progress-bar">
+					<div class="progress-bar-fill"></div>
+				</div>
+				<p class="progress-label">Progress:</p><span class="progress-info">2/3</span>
+			</div>
+		</ion-col>
+		<ion-col col-4 col-sm-6>
+			<div class="quest-icon"><img src="../assets/icon/blue-calendar.png"></div>
+		</ion-col>
+	</ion-row>
+	<hr class="quest-separator">
+	<h2 class="quest-heading">Weekly Quest</h2>
+	<ion-row padding>
+		<ion-col col-4 col-sm-6>
+			<div class="quest-icon"><img src="../assets/icon/purple-calendar.png"></div>
+		</ion-col>
+		<ion-col col-8 col-sm-6>
+			<div class="quest-container-right">
+				<p class="quest-info">Complete 3 trails</p>
+				<div class="progress-bar">
+					<div class="progress-bar-fill"></div>
+				</div>
+				<p class="progress-label">Progress:</p><span class="progress-info">2/3</span>
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-content>
