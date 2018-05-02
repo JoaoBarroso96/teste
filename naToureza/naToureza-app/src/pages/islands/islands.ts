@@ -25,7 +25,7 @@ export class IslandsPage {
   }
 
   onClick() {
-  this.navCtrl.push('TypePage');
+    this.navCtrl.push('TypePage');
   }
 
 

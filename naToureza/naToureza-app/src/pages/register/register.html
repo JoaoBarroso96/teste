@@ -8,42 +8,44 @@
 	<div class="logo-white">
 		<img src="assets/icon/logo-white.png">
 	</div>
-	<ion-row class="login-form">
-		<ion-item class="login-input">
-			<ion-label><img class="img-input" src="assets/icon/username.png"></ion-label>
-			<ion-input type="text" placeholder="USERNAME"></ion-input>
-		</ion-item>
-		<ion-item class="login-input">
-			<ion-label><img class="img-input" src="assets/icon/mail.png"></ion-label>
-			<ion-input type="text" placeholder="EMAIL ADDRESS"></ion-input>
-		</ion-item>
-		<ion-item class="login-input">
-			<ion-label><img class="img-input" src="assets/icon/padlock.png"></ion-label>
-			<ion-input type="password" placeholder="PASSWORD"></ion-input>
-		</ion-item>
-		<ion-item class="login-input">
-			<ion-label><img class="img-input" src="assets/icon/padlock-confirm.png"></ion-label>
-			<ion-input type="password" placeholder="CONFIRM PASSWORD"></ion-input>
-		</ion-item>
-	</ion-row>
-	<ion-row>
-		<button ion-button class="standard-button filled">SIGN UP</button>
-	</ion-row>
-	<ion-row>
-		<div tappable clear full color="light" id="own-account"  (click)='openLogin()'>
-			<p>I have already have an account.</p>
-		</div>
-	</ion-row>
-	<ion-row>
-		<div class="with-area">
-			<p class="with-text"><span>or register with</span></p>
-		</div>
-	</ion-row>
-	<ion-row>
-		<button ion-button class="standard-button social-network-button ghost" (click)='onClick()'>
-			<img class="google-icon" src="assets/icon/google-plus.png">
-			<p>GOOGLE</p>
-		</button>
-	</ion-row>
+	<form>
+		<ion-row class="login-form">
+			<ion-item class="login-input">
+				<ion-label><img class="img-input" src="assets/icon/username.png"></ion-label>
+				<ion-input type="text" placeholder="USERNAME"></ion-input>
+			</ion-item>
+			<ion-item class="login-input">
+				<ion-label><img class="img-input" src="assets/icon/mail.png"></ion-label>
+				<ion-input type="text" placeholder="EMAIL ADDRESS"></ion-input>
+			</ion-item>
+			<ion-item class="login-input">
+				<ion-label><img class="img-input" src="assets/icon/padlock.png"></ion-label>
+				<ion-input type="password" placeholder="PASSWORD"></ion-input>
+			</ion-item>
+			<ion-item class="login-input">
+				<ion-label><img class="img-input" src="assets/icon/padlock-confirm.png"></ion-label>
+				<ion-input type="password" placeholder="CONFIRM PASSWORD"></ion-input>
+			</ion-item>
+		</ion-row>
+		<ion-row>
+			<button ion-button class="standard-button filled">SIGN UP</button>
+		</ion-row>
+		<ion-row>
+			<div tappable clear full color="light" id="own-account"  (click)='openLogin()'>
+				<p>I have already have an account.</p>
+			</div>
+		</ion-row>
+		<ion-row>
+			<div class="with-area">
+				<p class="with-text"><span>or register with</span></p>
+			</div>
+		</ion-row>
+		<ion-row>
+			<button ion-button class="standard-button social-network-button ghost" (click)='onClick()'>
+				<img class="google-icon" src="assets/icon/google-plus.png">
+				<p>GOOGLE</p>
+			</button>
+		</ion-row>
+	</form>
 	<div><img id="img-tour" src="assets/imgs/tour.png"></div>
 </ion-content>

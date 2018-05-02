@@ -12,7 +12,6 @@ page-register {
 		background: url('../assets/imgs/background.png');
 		background-size: cover;
 		background-repeat: no-repeat;
-		//background: color($colors, primary);
 	}
 
 	.logo-white {
@@ -133,6 +132,7 @@ page-register {
 		margin: auto;
 
 	}
+
 
 	@media only screen and(max-height: 600px) {
 		.logo-white {

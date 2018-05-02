@@ -35,6 +35,8 @@ $font-family-light: 'Raleway Light';
 $font-family-medium: 'Raleway Medium';
 $font-family-regular: 'Raleway Regular';
 $font-family-bold: 'Raleway Bold';
+$font-family-extra-bold: 'Raleway Extra Bold';
+$font-family-light-italic: 'Raleway Light Italic';
 $navbar-font-size: 2em;
 $bold-font-size: 1.5em;
 $with-font-size: 1.2em;
@@ -65,7 +67,9 @@ $colors: (
   light-blue: #00b3b0,
   filled-blue: #0e4a4f,
   progress-grey: #e3e3e3,
-  shock-turquoise: #12c7c6
+  shock-turquoise: #12c7c6,
+  light-gray: #7a7a7a,
+  darker-gray: #474747
 
 );
 

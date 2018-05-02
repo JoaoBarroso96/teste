@@ -16,9 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 
 export class ActivitiesPage {
-	test: boolean = false;
-	shownGroup = null;
-	activities = [
+	public shownGroup = null;
+	public activities = [
   	{title: "Trails", places: ["Lagoa das Sete Cidades","Lagoa do Congro","Lagoa das Furnas"]},
   	{title: "Trails", places: ["Lagoa das Sete Cidades","Lagoa do Congro","Lagoa das Furnas"]},
   	{title: "Trails", places: ["Lagoa das Sete Cidades","Lagoa do Congro","Lagoa das Furnas"]},
@@ -42,7 +41,7 @@ export class ActivitiesPage {
   }
 
   openPage(){
-  	this.navCtrl.push('TypePage');
+  	this.navCtrl.push('SpotPage');
   }
 
   ionViewDidLoad() {

@@ -1,3 +1,248 @@
 page-spot {
+	/* ------------ gallery arrow buttons  ------------ */
+	.btnPrev {
+		height: 30px;
+		width: 30px;
+		background: rgba(0,0,0,0.5);
+		border-radius: 50%;
+		position: absolute;
+		left: 5vw;
+		top: 15vh;
+		box-shadow: none;
+	}
+
+	.btnNext {
+		height: 30px;
+		width: 30px;
+		background: rgba(0,0,0,0.5);
+		border-radius: 50%;
+		position: absolute;
+		right: 5vw;
+		top: 15vh;
+		box-shadow: none;
+	}
+	
+	/* ------------ segments (information and reviews)  ------------ */
+	.segment-md .segment-button.segment-activated {
+		border-color: color($colors,"light-blue");
+
+		p {
+			font-family: $font-family-regular;
+			color: color($colors,"light-blue");
+			font-weight: 900;
+			font-size: 1.5em;
+			text-transform: capitalize;
+			line-height: 0.5em;
+
+		}
+	}
+
+	.segment-md .segment-button {
+
+		p {
+			font-family: $font-family-regular;
+			color: color($colors,"light-gray");
+			font-size: 1.5em;
+			text-transform: capitalize;
+			line-height: 0.5em;
+
+		}
+	}
+
+	/* ------------ gallery images and text styles  ------------ */
+	.spot-gallery {
+		position: relative;
+		img {
+			max-height: 30vh;
+			width: 100%;
+		}
+	}
+
+	.gallery-info {
+		width: 100%;
+		position: absolute;
+		bottom: 5px;
+		z-index: 2;
+		background: rgba(0,0,0,0.5);
+
+		img {
+			height: 20px;
+			width: auto;
+			vertical-align: middle;
+			margin-left: 1em;
+		}
+
+		p {
+			font-family: $font-family-light;
+			color: white;
+			display: inline-block;
+			padding-left: 0.5em;
+			font-size: 0.8em;
+		}
+
+	}
+
+	/* ------------ spot information styles  ------------ */
+	.spot-info {
+		padding: 0em 2rem;
+
+		h1 {
+			font-family: $font-family-regular;
+			color: color($colors, "light-blue");
+			font-size: 1.7em;
+			font-weight: 700;
+		}
+
+		h2 {
+			font-family: $font-family-light;
+			color: color($colors, "light-gray");
+			font-size: 1.2em;
+		}
+
+		p {
+			font-family: $font-family-light;
+			font-size: 1.2em;
+		}
+	}
+	
+	/* ------------ spot topics styles  ------------ */
+	.spot-topics {
+		text-align: center;
+		margin: auto 0;
+
+		h3 {
+			font-family: $font-family-regular;
+			color: color($colors, "light-blue");
+			font-size: 1.5em;
+			font-weight: 600;
+		}
+
+		p {
+			font-family: $font-family-light;
+			color: color($colors, "darker-gray");
+			font-size: 1.3em;
+		}
+
+
+	}
+
+	.topic {
+		display: inline-block;
+		padding: 0em 1em;
+
+		img {
+			height: 50px;
+			width: 50px;
+			margin: auto;
+		}
+	}
+
+	/* ------------ spot buttons (save position & mark as complete)  ------------ */
+	.spot-options {
+		margin-top: 2em auto;
+	}
+
+	.spot-options-button {
+		border-radius: 40px;
+		border: solid 2px;
+		box-shadow: none;
+		width: 100%;
+
+		img {
+			height: 20px;
+			width: auto;
+			padding-right: 0.2em;
+		}
+
+		p {
+			font-family: $font-family-medium;
+			font-weight: 900;
+			font-size: 0.8em;
+			padding: 0.2em;
+		}
+	}
+
+	.position-icon {
+		content: url("../assets/icon/location-pointer.png");
+	}
+
+	.complete-icon {
+		content: url("../assets/icon/tick.png");
+	}
+
+	.ghost {
+		background-color: transparent;
+		border-color: color($colors,"light-blue");
+
+		p {
+			color: color($colors,"light-blue");
+		}
+
+	}
+
+	.filled {
+		background-color: color($colors,"light-blue");
+		border-color: color($colors,"light-blue");
+
+		p {
+			color: white;
+		}
+	}
+
+	/* ------------ rating star styles  ------------ */
+	.star {
+		width: 12px;
+		height: 12px;
+		display: inline-block;
+	}
+
+	.star-filled {
+		content: url('../assets/icon/star-filled.png');
+	}
+
+	.star-half {
+		content: url('../assets/icon/star-half.png');
+	}
+
+	.star-unfilled {
+		content: url('../assets/icon/star-unfilled.png');
+	}
+
+	.review {
+		padding: 1em 1em;
+		border-bottom: solid 1px rgba(219,221,221,0.6);
+		h3 {
+			font-family: $font-family-medium;
+			color: color($colors, "darker-gray");
+			font-size: 1.3em;
+		}
+
+		p {
+			font-family: $font-family-light;
+			color: color($colors, "darker-gray");
+			font-style: italic;
+			font-size: 1.1em;
+			text-align: justify;
+
+		}
+	}
+	/* ------------ review segment elements styles  ------------ */
+	.review-profile-pic {
+		img {
+			margin-top: 1em;
+		}
+
+	}
+
+	/* makes the last item (review) borderless*/
+	.review:last-child {
+		border: none;
+	}
+
+
+	.review-text {
+		margin-right: 0.5em;
+	}
+
 
 }

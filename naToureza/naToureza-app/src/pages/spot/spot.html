@@ -1,5 +1,5 @@
 <!--
-  Generated template for the SpotPage page.
+ ♀ Generated template for the SpotPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -13,6 +13,141 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+	<ion-grid no-padding>
+		<ion-row>
+			<ion-col col-12>
+				<ion-slides class="spot-gallery" #slides >
+					<ion-slide>
+						<img src="https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2015/04/30/13/azores.jpg">
+						<button type="submit" color="primary" ion-button class="btnPrev" (click)="prev()">
+							<ion-icon name="ios-arrow-back"></ion-icon>
+						</button>
+						<button type="submit" color="primary" ion-button class="btnNext" (click)="next()">
+							<ion-icon name="ios-arrow-forward"></ion-icon>
+						</button>
+					</ion-slide>
+					<ion-slide>
+						<img src="http://i.dailymail.co.uk/i/pix/2017/06/24/09/41B30D7200000578-0-image-a-22_1498294592006.jpg">
+					</ion-slide>
+					<ion-slide>
+						<img src="https://www.auraree.com/portugal/wp-content/uploads/2017/12/azores-travel-tips-things-to-know-before-go-hiking-pico.jpg">
+					</ion-slide>
+					<div class="gallery-info">
+						<img src="assets/icon/camera.png">
+						<p>{{getIndex()}}</p>
+						<p float-right margin-right>2 reviews</p>
+					</div>
+				</ion-slides>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-segment mode="md" [(ngModel)]="active">
+		<ion-segment-button class="spot-tab" value="info" (click)="changeSegment('info')">
+			<p>Information</p>
+		</ion-segment-button>
+		<ion-segment-button class="spot-tab" value="reviews" (click)="changeSegment('reviews')">
+			<p>Reviews</p>
+		</ion-segment-button>
+	</ion-segment>
+	<div [ngSwitch]="active">
+		<div *ngSwitchCase="'info'">
+			<ion-grid>
+				<ion-row>
+					<ion-col col-12>
+						<div class="spot-info">
+							<h1>Lagoa das Furnas</h1>
+							<h2>São Miguel</h2>
+							<p class="spot-description">This trail begins and ends in the town of Furnas and takes around 3 hours to complete. <br><br>
+							The route starts in Três Bicas and continues on through this area until it begins to climb on a tarmac road that leads to Lagoa das Furnas.
+							</p>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row class="spot-topics" justify-content-center>
+					<ion-col col-4>
+						<div class="topic">
+							<img src="https://i.pinimg.com/originals/fc/e0/f7/fce0f7619014a3f034bf75af32a30b78.png">
+							<h3>Duration</h3>
+							<p>3h</p>
+						</div>
+					</ion-col>
+					<ion-col col-4>
+						<div class="topic">
+							<img src="https://i.pinimg.com/originals/fc/e0/f7/fce0f7619014a3f034bf75af32a30b78.png">
+							<h3>Difficulty</h3>
+							<p>Average</p>
+						</div>
+					</ion-col>
+					<ion-col col-4>
+						<div class="topic">
+							<img src="https://i.pinimg.com/originals/fc/e0/f7/fce0f7619014a3f034bf75af32a30b78.png">
+							<h3>Rating</h3>
+							<p>4.2/5</p>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row class="spot-options" justify-content-center>
+					<ion-col col-6 col-sm-4>
+						<button ion-button class="spot-options-button ghost">
+							<img class="position-icon">
+							<p>SAVE POSITION</p>
+						</button>
+					</ion-col>
+					<ion-col col-6 col-sm-4>
+						<button ion-button class="spot-options-button filled">
+							<img class="complete-icon">
+							<p>MARK AS COMPLETE</p>
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+		<div *ngSwitchCase="'reviews'">
+			<ion-grid>
+				<ion-row class="review">
+					<ion-col col-2>
+						<div class="review-profile-pic">
+							<img src="https://i.pinimg.com/originals/fc/e0/f7/fce0f7619014a3f034bf75af32a30b78.png">
+						</div>
+					</ion-col>
+					<ion-col col-10>
+						<div class="review-text">
+							<h3>User 1</h3>
+							<div class="star-rating">
+			              		<img class="star star-filled">
+			              		<img class="star star-filled">
+			              		<img class="star star-filled">
+			              		<img class="star star-half">
+			              		<img class="star star-unfilled">
+	            			</div>
+	            			<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas eget risus sed leo fringilla semper. In cursus sem eget ante consequat laoreet. In imperdiet facilisis nibh a elementum. Nulla imperdiet, mi vel luctus dapibus, orci nisl accumsan dolor, dictum imperdiet nisi dolor quis eros. Fusce lacinia mattis blandit. Morbi ultricies ultrices viverra.
+							</p>
+	          			</div>
+	          		</ion-col>
+				</ion-row>
+				<ion-row class="review">
+					<ion-col col-2>
+						<div class="review-profile-pic">
+							<img src="https://i.pinimg.com/originals/fc/e0/f7/fce0f7619014a3f034bf75af32a30b78.png">
+						</div>
+					</ion-col>
+					<ion-col col-10>
+						<div class="review-text">
+							<h3>User 1</h3>
+							<div class="star-rating">
+			              		<img class="star star-filled">
+			              		<img class="star star-filled">
+			              		<img class="star star-filled">
+			              		<img class="star star-half">
+			              		<img class="star star-unfilled">
+	            			</div>
+	            			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at aliquet ex. Donec sit amet efficitur lorem, ac pulvinar tellus. Pellentesque efficitur nulla a scelerisque vestibulum. Proin dictum sapien in pellentesque mattis. Mauris varius a ligula et consectetur. Quisque mi diam, commodo eget lobortis sed, dictum vitae ex. Donec vulputate ut nisi non dapibus. Sed ornare urna non ante tincidunt, elementum venenatis enim venenatis. Etiam pulvinar odio nunc, sit amet posuere orci efficitur ut. Sed ultricies rhoncus risus ac consequat.
+							</p>
+	          			</div>
+	          		</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</div>
 </ion-content>

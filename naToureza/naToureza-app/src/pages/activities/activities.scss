@@ -60,6 +60,18 @@ page-activities {
 		margin: 0 1%;
 	}
 
+	.star-filled {
+		content: url('../assets/icon/star-filled.png');
+	}
+
+	.star-half {
+		content: url('../assets/icon/star-half.png');
+	}
+
+	.star-unfilled {
+		content: url('../assets/icon/star-unfilled.png');
+	}
+
 	.activities-arrow {
 		float: right;
 		color: white;

@@ -24,7 +24,7 @@ export class RegisterPage {
 
 
   openLogin() {
-  this.navCtrl.push('LoginPage');
+    this.navCtrl.push('LoginPage');
   }
 
 }
