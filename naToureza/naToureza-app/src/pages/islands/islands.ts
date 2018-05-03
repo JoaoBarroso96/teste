@@ -24,8 +24,10 @@ export class IslandsPage {
     console.log('ionViewDidLoad IslandsPage');
   }
 
-  onClick() {
-    this.navCtrl.push('TypePage');
+  onClick(ilha: string) {
+    this.navCtrl.push('TypePage',{
+      ilha: ilha,
+    });
   }
 
 

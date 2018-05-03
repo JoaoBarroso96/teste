@@ -17,21 +17,29 @@ export class UsersProvider {
   public spots: any;
 
   //private API_URL = 'https://reqres.in/api/';
-  private API_URL = 'http://localhost:8080/naToureza/public/api';
-  
+  //private API_URL = 'http://localhost:8080/naToureza/public/api';
+  private API_URL = 'http://www.fundodemaneio.com/natoureza/testes/public/api';
+
   constructor(public http: Http) {}
 
-  createAccount(email: string, password: string){
+  createAccount(email: string, password: string, username: string){
     return new Promise((resolve, reject) => {
       var data = {
         email: email,
+        username: username,
         password: password
       };
-
-      let headers = new Headers(
+      console.log(data);
+      /*let headers = new Headers(
         {
           'Content-Type' : 'application/json'
-        });
+        });*/
+        var headers = new Headers();
+        headers.append('Access-Control-Allow-Origin' , '*');
+        headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+        headers.append('Accept','application/json');
+        headers.append('content-type','application/json');
+
       let options = new RequestOptions({ headers: headers });
 
       this.http.post(this.API_URL + "/user", data, options)

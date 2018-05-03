@@ -8,31 +8,31 @@
 	<div class="logo-white">
 		<img src="assets/icon/logo-white.png">
 	</div>
-	<form>
+	<form (ngSubmit)="createAccount()" [formGroup]="registerForm">
 		<ion-row class="login-form">
-			<ion-item class="login-input">
+			<ion-item id="ion-username" class="login-input">
 				<ion-label><img class="img-input" src="assets/icon/username.png"></ion-label>
-				<ion-input type="text" placeholder="USERNAME"></ion-input>
+				<ion-input type="text" [(ngModel)]="model.username" placeholder="USERNAME" formControlName="username"  name="username"></ion-input>
 			</ion-item>
-			<ion-item class="login-input">
+			<ion-item id="ion-email" class="login-input">
 				<ion-label><img class="img-input" src="assets/icon/mail.png"></ion-label>
-				<ion-input type="text" placeholder="EMAIL ADDRESS"></ion-input>
+				<ion-input type="text" [(ngModel)]="model.email" placeholder="EMAIL ADDRESS" formControlName="email" name="email"></ion-input>
 			</ion-item>
 			<ion-item class="login-input">
 				<ion-label><img class="img-input" src="assets/icon/padlock.png"></ion-label>
-				<ion-input type="password" placeholder="PASSWORD"></ion-input>
+				<ion-input type="password" [(ngModel)]="model.password" placeholder="PASSWORD" formControlName="password" name="password"></ion-input>
 			</ion-item>
 			<ion-item class="login-input">
 				<ion-label><img class="img-input" src="assets/icon/padlock-confirm.png"></ion-label>
-				<ion-input type="password" placeholder="CONFIRM PASSWORD"></ion-input>
+				<ion-input type="password" placeholder="CONFIRM PASSWORD" formControlName="password_confirm" name="password_confirm"></ion-input>
 			</ion-item>
 		</ion-row>
 		<ion-row>
-			<button ion-button class="standard-button filled">SIGN UP</button>
+			<button ion-button class="standard-button filled" type="submit" [disabled]="!registerForm.valid">SIGN UP</button>
 		</ion-row>
 		<ion-row>
 			<div tappable clear full color="light" id="own-account"  (click)='openLogin()'>
-				<p>I have already have an account.</p>
+				<p>I already have an account.</p>
 			</div>
 		</ion-row>
 		<ion-row>

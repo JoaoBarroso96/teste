@@ -21,6 +21,7 @@ export class RegistarPage {
       this.model.password = "";
 
       this.registerForm = this.builder.group({
+        'emdasdil' : ['',Validators.compose([Validators.required])],
         'email' : ['',Validators.compose([Validators.required])],
         'password': ['', Validators.required],
         'password_confirm': ['', Validators.required]
@@ -42,7 +43,7 @@ export class RegistarPage {
   }
 
   createAccount(){
-    this.usersProvider.createAccount(this.model.email,this.model.password)
+    this.usersProvider.createAccount(this.model.email,this.model.password,this.model.password)
       .then((result: any) =>{
         this.toast.create({message: 'Utilizar criado ' + result.token, position: 'botton', duration: 1500}).present();
       })
